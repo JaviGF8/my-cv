@@ -1,0 +1,44 @@
+@import '../../styles/constants.scss';
+
+.cube-container {
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: ease-in all $transition-slow;
+
+    .cube-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background-color: $black;
+      color: $white;
+
+      > * {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .cube-front {
+      transform: rotateY(0deg) translateZ(100px);
+    }
+    .cube-right {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .cube-back {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+    .cube-left {
+      transform: rotateZ(180deg) rotateY(-90deg) translateZ(100px);
+    }
+    .cube-top {
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    .cube-bottom {
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+  }
+}

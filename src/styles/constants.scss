@@ -1,0 +1,65 @@
+// COLORS
+// Primary
+$primary-darker: #123344;
+$primary-dark: #234f61;
+$primary: #b71d2b;
+$primary-light: #6d909e;
+$primary-lighter: #c1d0d5;
+
+// Secondary
+$secondary-darker: #488e7e;
+$secondary-dark: #65a698;
+$secondary: #78b6a9;
+$secondary-light: #a1ccc3;
+$secondary-lighter: #d7e9e5;
+
+// Secondary
+$accent-darker: #e8b361;
+$accent-dark: #eec47d;
+$accent: #f2d090;
+$accent-light: #f6deb1;
+$accent-lighter: #fbf1de;
+
+// Gray
+$gray: #888888;
+$gray-light: #c0c0c0;
+$gray-lighter: #d8d8d8;
+$gray-border: 1px solid rgba($gray-light, 0.5);
+
+// B&W
+$background-gray: #fafaff;
+$white: #ffffff;
+$black: #080808;
+
+// Error, info...
+$color-error: #db341a;
+$color-error-border: #ff745e;
+$color-warning: #e8b125;
+$color-warning-border: #ffef5e;
+
+// PADDING, MARGIN, ETC
+$size-xs: 2px;
+$size-sm: 4px;
+$size-md: 8px;
+$size-lg: 16px;
+$size-xl: 32px;
+
+// TRANSITIONS
+$transition-slow: 0.5s;
+$transition-mid: 0.25s;
+$transition-fast: 0.1s;
+
+// FONT
+$font-xs: 8px;
+$font-sm: 12px;
+$font-md: 14px;
+$font-lg: 16px;
+$font-xl: 20px;
+$font-subtitle: 24px;
+$font-title: 32px;
+
+// SCREEN SIZES
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;

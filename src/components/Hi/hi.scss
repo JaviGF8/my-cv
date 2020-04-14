@@ -1,0 +1,68 @@
+@import '../../styles/constants.scss';
+
+.hi-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $black;
+  transition: linear all $transition-slow;
+
+  h1 {
+    color: $primary;
+  }
+
+  .hi {
+    display: flex;
+    max-width: $screen-xl;
+
+    .letter {
+      display: flex;
+      flex-wrap: wrap;
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: $size-sm 0;
+
+        > * {
+          margin: 0 $size-sm;
+        }
+      }
+
+      .white-background {
+        background-color: $white;
+        border-radius: $size-md;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.hi-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .hi-container {
+    .hi {
+      flex-direction: column;
+
+      .letter {
+        padding: $size-md 0;
+      }
+    }
+  }
+}
