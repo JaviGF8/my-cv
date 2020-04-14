@@ -15,19 +15,21 @@ body {
   box-shadow: 0px 0 $size-md $size-xs rgba($gray, 0.5);
 }
 
+html {
+  background-color: $background-gray;
+}
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
-  background-color: $background-gray;
 
   #main-container {
+    padding-top: 60px;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     overflow: auto;
     display: flex;
     align-items: center;
@@ -40,6 +42,7 @@ main {
         transition: ease-in-out all $transition-extra-slow $transition-mid;
 
         .cube-face {
+          cursor: pointer;
           @extend .shadow;
           border-radius: $size-lg;
 

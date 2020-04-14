@@ -31,6 +31,16 @@ nav.navbar {
       color: $white;
     }
 
+    .navbar-subtitle {
+      font-size: $font-lg;
+      font-weight: 300;
+      font-style: italic;
+
+      span {
+        color: $primary-lighter;
+      }
+    }
+
     .navbar-btns {
       .navbar-btn {
         border-bottom: 2px solid transparent;
@@ -62,6 +72,18 @@ nav.navbar {
     .navbar-content {
       justify-content: center;
       flex-direction: column;
+
+      .navbar-title {
+        font-size: $font-xl;
+      }
+
+      .navbar-subtitle {
+        font-size: $font-sm;
+
+        span {
+          font-size: $font-md;
+        }
+      }
 
       .navbar-btns {
         display: flex;

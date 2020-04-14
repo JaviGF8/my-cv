@@ -6,7 +6,7 @@ import Cube from '../Cube';
 const getSize = () => {
   const { innerHeight, innerWidth } = window;
 
-  return ((innerWidth > innerHeight ? innerHeight : innerWidth) * 0.7) / 10;
+  return Math.floor(((innerWidth > innerHeight ? innerHeight : innerWidth) * 0.7) / 10);
 };
 
 const getOption = () => {
