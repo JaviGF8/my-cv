@@ -1,21 +1,49 @@
 import React, { useState } from 'react';
 import Hi from '../components/Hi';
-// import { Switch, Route } from 'react-router-dom';
+import Cube from '../components/Cube';
+import { CUBE_FACES } from '../components/Cube/Cube';
+import Navbar from '../components/Navbar';
+
+const getSize = () => {
+  const { innerHeight, innerWidth } = window;
+
+  return (innerWidth > innerHeight ? innerHeight : innerWidth) * 0.8;
+};
+const size = getSize();
 
 const Main = () => {
-  const [ face, setFace ] = useState('front');
+  const [ face, setFace ] = useState(CUBE_FACES.left);
   return (
     <main>
       <div id="main-container" className="fadein">
-        {/* MY CV PAGE */}
-        {/* <Box face={face} size={200} rightContent={<div>right</div>} leftContent={<div>left</div>} frontContent={<div>front</div>} backContent={<div>back</div>} topContent={<div>top</div>} bottomContent={<div>bottom</div>} />
-        <button type="button" onClick={() => setFace('right')} >right</button>
-        <button type="button" onClick={() => setFace('left')} >left</button>
-        <button type="button" onClick={() => setFace('front')} >front</button>
-        <button type="button" onClick={() => setFace('back')} >back</button>
-        <button type="button" onClick={() => setFace('top')} >top</button>
-        <button type="button" onClick={() => setFace('bottom')} >bottom</button> */}
+        <Navbar onSelect={setFace} selected={face} />
         <Hi />
+        <div id="main-cube">
+          <Cube
+            face={face}
+            leftContent={
+              <div>
+                <h2>INFO</h2>
+              </div>
+            }
+            frontContent={
+              <div>
+                <h2>FORMACION</h2>
+              </div>
+            }
+            rightContent={
+              <div>
+                <h2>TRAYECTORIA</h2>
+              </div>
+            }
+            backContent={
+              <div>
+                <h2>SOCIAL</h2>
+              </div>
+            }
+            size={size}
+          />
+        </div>
       </div>
     </main>
   );

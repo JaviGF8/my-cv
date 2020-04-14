@@ -1,0 +1,17 @@
+@import '../../styles/constants.scss';
+
+.custom-btn {
+  padding: $size-md $size-lg;
+  font-size: $font-lg;
+  border-radius: $size-sm;
+  border: 0;
+  color: $white;
+  background-color: $primary;
+  transition: linear all $transition-mid;
+  outline: 0;
+  cursor: pointer;
+
+  > *:not(:first-child) {
+    margin-left: $size-md;
+  }
+}

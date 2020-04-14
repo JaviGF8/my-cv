@@ -127,8 +127,4 @@ const Hi = () => {
   );
 };
 
-Hi.defaultProps = {};
-
-Hi.propTypes = {};
-
 export default Hi;

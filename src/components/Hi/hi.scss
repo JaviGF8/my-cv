@@ -12,6 +12,7 @@
   flex-direction: column;
   background-color: $black;
   transition: linear all $transition-slow;
+  z-index: 1001;
 
   h1 {
     color: $primary;

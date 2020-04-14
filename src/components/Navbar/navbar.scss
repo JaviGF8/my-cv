@@ -1,0 +1,47 @@
+@import '../../styles/constants.scss';
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  height: 60px;
+  padding: 0 $size-lg;
+
+  .navbar-content {
+    max-width: $screen-xl;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar-title {
+      font-size: $font-title;
+      font-weight: bold;
+    }
+
+    .navbar-btns {
+      .navbar-btn {
+        border-bottom: 2px solid $primary;
+        border-radius: 0;
+        height: 100%;
+        height: 60px;
+      }
+      .navbar-btn.navbar-btn-selected {
+        border-bottom-color: $white;
+        background-color: $primary-lighter;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  nav.navbar {
+  }
+}
