@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import Cube from '../Cube';
 
 const getSize = () => {
@@ -24,7 +26,7 @@ const cubeOptions = {
   topContent: content,
 };
 
-const Hi = () => {
+const Hi = ({ onHide }) => {
   const [ animation, setAnimation ] = useState(false);
   const [ hidden, setHidden ] = useState(false);
 
@@ -34,6 +36,12 @@ const Hi = () => {
     setTimeout(() => setAnimation(false), 2000);
     setTimeout(() => setHidden(true), 2500);
   }, []);
+
+  useEffect(() => {
+    if (hidden && 'function' === typeof onHide) {
+      onHide();
+    }
+  }, [ hidden ]);
 
   const show = animation && !hidden;
 
@@ -127,6 +135,14 @@ const Hi = () => {
       </div>
     </div>
   );
+};
+
+Hi.defaultProps = {
+  onHide: undefined,
+};
+
+Hi.propTypes = {
+  onHide: PropTypes.func,
 };
 
 export default Hi;

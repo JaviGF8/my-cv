@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Hi from '../components/Hi';
 import Cube from '../components/Cube';
 import { CUBE_FACES } from '../components/Cube/Cube';
@@ -13,13 +13,23 @@ const size = getSize();
 
 const Main = () => {
   const [ face, setFace ] = useState(CUBE_FACES.left);
+  const [ hiddenIntro, setHiddenIntro ] = useState(false);
+  const [ initialTransition, setInitialTransition ] = useState(true);
+
+  useEffect(() => {
+    if (hiddenIntro) {
+      setTimeout(() => setInitialTransition(false), 1500);
+    }
+  }, [ hiddenIntro ]);
+
   return (
     <main>
       <div id="main-container" className="fadein">
         <Navbar onSelect={setFace} selected={face} />
-        <Hi />
-        <div id="main-cube">
+        <Hi onHide={() => setHiddenIntro(true)} />
+        <div id="main-cube" className={hiddenIntro ? '' : 'hidden-cube'}>
           <Cube
+            className={initialTransition ? 'initial-transition' : ''}
             face={face}
             leftContent={
               <div>
