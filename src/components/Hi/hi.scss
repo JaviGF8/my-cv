@@ -23,6 +23,11 @@
     span.primary {
       color: $primary;
       font-size: $font-title;
+
+      span {
+        font-size: $font-xl;
+        font-weight: 300;
+      }
     }
     span.secondary {
       color: $secondary;

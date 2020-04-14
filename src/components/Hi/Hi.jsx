@@ -48,7 +48,10 @@ const Hi = ({ onHide }) => {
   return (
     <div className={`hi-container${hidden ? ' hidden' : ''}`}>
       <h1>
-        <span className="primary">My CuVe</span> by <span className="secondary">Javier García</span>
+        <span className="primary">
+          My C<span>u</span>V<span>e</span>
+        </span>{' '}
+        by <span className="secondary">Javier García</span>
       </h1>
       <div className="hi">
         <div className="letter">
