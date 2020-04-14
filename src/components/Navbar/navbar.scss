@@ -5,13 +5,17 @@ nav.navbar {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 900;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $primary;
   height: 60px;
   padding: 0 $size-lg;
+
+  .expand-btn {
+    display: none;
+  }
 
   .navbar-content {
     max-width: $screen-xl;
@@ -24,14 +28,18 @@ nav.navbar {
     .navbar-title {
       font-size: $font-title;
       font-weight: bold;
+      color: $white;
     }
 
     .navbar-btns {
       .navbar-btn {
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid transparent;
         border-radius: 0;
         height: 100%;
         height: 60px;
+      }
+      .navbar-btn:hover {
+        background-color: $primary-light;
       }
       .navbar-btn.navbar-btn-selected {
         border-bottom-color: $white;
@@ -43,5 +51,46 @@ nav.navbar {
 
 @media screen and (max-width: $screen-lg) {
   nav.navbar {
+    // .expand-btn {
+    //   display: block;
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   height: 60px;
+    //   width: 60px;
+    // }
+    .navbar-content {
+      justify-content: center;
+      flex-direction: column;
+
+      .navbar-btns {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+
+        .custom-btn {
+          max-height: 0;
+          padding: 0;
+          border: 0;
+          opacity: 0;
+          pointer-events: none;
+          transition: ease-in-out all $transition-mid;
+        }
+      }
+
+      .navbar-btns.expanded {
+        border-top: 1px solid $white;
+
+        .custom-btn {
+          max-height: $size-xl;
+          padding: inherit;
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
   }
 }

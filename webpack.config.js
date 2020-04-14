@@ -23,7 +23,6 @@ function getPlugins() {
         env: {
           ENVIRONMENT: JSON.stringify(ENVIRONMENT),
           NODE_ENV: JSON.stringify(ENVIRONMENT),
-          PUBLIC_URL: JSON.stringify('/'),
         },
       },
     }),
@@ -108,7 +107,7 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
-    port: 3001,
+    port: 3000,
     historyApiFallback: true,
   },
   plugins: getPlugins(),

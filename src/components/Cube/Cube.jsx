@@ -20,9 +20,12 @@ const Box = ({
   rightContent,
   size,
   topContent,
+  withSwipe,
 }) => {
   const [ angX, setAngX ] = useState(0);
   const [ angY, setAngY ] = useState(0);
+  const [ startX, setStartX ] = useState(null);
+  const [ startY, setStartY ] = useState(null);
 
   useEffect(() => {
     let x = 0;
@@ -46,6 +49,32 @@ const Box = ({
     setAngY(y);
   }, [ face ]);
 
+  useEffect(() => {
+    setStartX(null);
+    setStartY(null);
+  }, [ angX, angY ]);
+
+  const handleMovementStart = (event) => {
+    const [ { clientX, clientY } ] = event.touches;
+
+    setStartX(clientX);
+    setStartY(clientY);
+  };
+
+  const handleMovement = (event) => {
+    const [ { clientX, clientY } ] = event.changedTouches;
+
+    const diffX = clientX - startX;
+    const diffY = clientY - startY;
+
+    if (50 < Math.abs(diffX)) {
+      setAngY(0 < diffX ? angY + 90 : angY - 90);
+    }
+    if (50 < Math.abs(diffY)) {
+      setAngX(0 < diffY ? angX - 90 : angX + 90);
+    }
+  };
+
   return (
     <div
       className={`cube-container${className ? ` ${className}` : ''}`}
@@ -55,7 +84,11 @@ const Box = ({
         position: 'relative',
         perspective: size * 3,
       }}>
-      <div className="cube" style={{ transform: `translateZ(-${size / 2}px) rotateX(${angX}deg) rotateY(${angY}deg)` }}>
+      <div
+        className="cube"
+        style={{ transform: `translateZ(-${size / 2}px) rotateX(${angX}deg) rotateY(${angY}deg)` }}
+        onTouchEnd={withSwipe ? handleMovement : undefined}
+        onTouchStart={withSwipe ? handleMovementStart : undefined}>
         <div
           className="cube-face cube-front"
           style={{
@@ -125,6 +158,7 @@ Box.defaultProps = {
   rightContent: undefined,
   size: 150,
   topContent: undefined,
+  withSwipe: false,
 };
 
 Box.propTypes = {
@@ -137,6 +171,7 @@ Box.propTypes = {
   rightContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
   size: PropTypes.number,
   topContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
+  withSwipe: PropTypes.bool,
 };
 
 export default Box;

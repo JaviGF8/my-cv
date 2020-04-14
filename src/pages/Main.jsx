@@ -41,7 +41,14 @@ const Main = () => {
                 <h2>SOCIAL</h2>
               </div>
             }
+            bottomContent={<div>Made by Javier García Fajardo</div>}
+            topContent={
+              <div>
+                <h2>Hello :)</h2>
+              </div>
+            }
             size={size}
+            withSwipe
           />
         </div>
       </div>

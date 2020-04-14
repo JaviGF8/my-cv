@@ -39,7 +39,9 @@ const Hi = () => {
 
   return (
     <div className={`hi-container${hidden ? ' hidden' : ''}`}>
-      <h1>Bienvenido a la web de Javier García</h1>
+      <h1>
+        <span className="primary">My CuVe</span> by <span className="secondary">Javier García</span>
+      </h1>
       <div className="hi">
         <div className="letter">
           <div>
