@@ -7,18 +7,10 @@
 
     .cube-face {
       border-radius: $size-lg;
-
-      * {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
     }
   }
 
-  .cube-container.initial-transition {
+  .initial-transition {
     .cube {
       transition: ease-in-out all $transition-extra-slow $transition-mid;
     }

@@ -20,6 +20,7 @@ const Cube = ({
   backContent,
   bottomContent,
   className,
+  disabled,
   face,
   frontContent,
   leftContent,
@@ -77,7 +78,7 @@ const Cube = ({
 
   const handleMovement = (event) => {
     event.preventDefault();
-    if (!moving && (startX || startY)) {
+    if (!disabled && !moving && (startX || startY)) {
       const clientX = event?.changedTouches?.[0]?.clientX || event.clientX;
       const clientY = event?.changedTouches?.[0]?.clientY || event.clientY;
 
@@ -128,10 +129,10 @@ const Cube = ({
       <div
         className="cube"
         style={{ transform: `translateZ(-${size / 2}px) rotateX(${angX}deg) rotateY(${angY}deg)` }}
-        onMouseDown={withSwipe ? handleMovementStart : undefined}
-        onMouseUp={withSwipe ? handleMovement : undefined}
-        onTouchEnd={withSwipe ? handleMovement : undefined}
-        onTouchStart={withSwipe ? handleMovementStart : undefined}>
+        onMouseDown={withSwipe && !disabled ? handleMovementStart : undefined}
+        onMouseUp={withSwipe && !disabled ? handleMovement : undefined}
+        onTouchEnd={withSwipe && !disabled ? handleMovement : undefined}
+        onTouchStart={withSwipe && !disabled ? handleMovementStart : undefined}>
         <div
           className="cube-face cube-front"
           style={{
@@ -195,6 +196,7 @@ Cube.defaultProps = {
   backContent: undefined,
   bottomContent: undefined,
   className: undefined,
+  disabled: false,
   face: CUBE_FACES.front,
   frontContent: undefined,
   leftContent: undefined,
@@ -208,6 +210,7 @@ Cube.propTypes = {
   backContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
   bottomContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   face: PropTypes.oneOf(Object.values(CUBE_FACES)),
   frontContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
   leftContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),

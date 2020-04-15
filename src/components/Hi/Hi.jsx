@@ -10,15 +10,18 @@ const getSize = () => {
   return Math.floor(((innerWidth > innerHeight ? innerHeight : innerWidth) * 0.7) / 10);
 };
 
-const content = <div className="white-background" />;
+const whiteContent = <div className="white-background background" />;
+const primaryContent = <div className="primary-background background" />;
+const secondaryContent = <div className="secondary-background background" />;
+const accentContent = <div className="accent-background background" />;
 const size = getSize();
 const unanimatedDiv = <div style={{ height: size, width: size, color: 'black' }} />;
 
 const cubeOptions = {
-  bottomContent: content,
-  leftContent: content,
-  rightContent: content,
-  topContent: content,
+  bottomContent: whiteContent,
+  leftContent: primaryContent,
+  rightContent: secondaryContent,
+  topContent: accentContent,
 };
 
 const Hi = ({ onHide }) => {

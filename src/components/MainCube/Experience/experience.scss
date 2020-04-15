@@ -1,0 +1,54 @@
+@import '../../../styles/constants.scss';
+
+.experience-section {
+  > div {
+    .company-experience {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: $size-md 0;
+      border-bottom: 1px solid $primary;
+
+      > * {
+        width: 100%;
+        margin: 0;
+      }
+
+      .company-name {
+        font-size: $font-xl;
+        width: 60%;
+      }
+      .company-duration {
+        width: 40%;
+        text-align: right;
+      }
+      .company-role {
+        color: $accent;
+        font-style: italic;
+        font-weight: 300;
+        font-size: $font-sm;
+        margin-top: $size-md;
+      }
+      .company-place {
+        font-size: $font-sm;
+        margin-bottom: $size-md;
+      }
+    }
+    .company-experience:nth-child(even) {
+      border-bottom-color: $secondary-dark;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .experience-section {
+    > div {
+      .company-experience {
+        .company-name,
+        company-duration {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

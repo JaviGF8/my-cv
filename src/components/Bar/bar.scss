@@ -9,6 +9,8 @@
   .bar {
     padding: $size-sm 0;
     transition: linear all $transition-slow;
+    display: flex;
+    align-items: center;
 
     > span {
       margin-left: $size-md;
@@ -45,12 +47,11 @@
 }
 .bar-total.vertical {
   min-height: 100px;
-  width: $size-xl;
+  min-width: $size-xl;
+  max-width: $size-xl;
   height: 100%;
   align-items: flex-end;
   .bar {
-    width: 100%;
-
     > span {
       writing-mode: tb-rl;
       transform: rotate(-180deg);
@@ -58,10 +59,8 @@
   }
 }
 .bar-total.horizontal {
-  height: $size-xl;
+  min-height: $size-xl;
+  max-height: $size-xl;
   min-width: 100px;
   width: 100%;
-  .bar {
-    height: 100%;
-  }
 }

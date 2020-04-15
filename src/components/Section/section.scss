@@ -1,9 +1,11 @@
 @import '../../styles/constants.scss';
 
+.cube-container .cube .cube-face .cube-section,
 .cube-section {
   margin: 0;
-  height: 100%;
-  width: 100%;
+  padding: $size-xl;
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
   background-color: $black;
   color: $white;
   cursor: pointer;
@@ -14,18 +16,29 @@
   justify-content: space-between;
   overflow: hidden;
 
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
   > div {
-    width: calc(100% - 64px);
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: $size-xl;
     overflow: hidden;
 
     h2 {
       margin: 0;
       text-transform: uppercase;
+      padding-bottom: $size-md;
+      border-bottom: 1px solid $primary;
+      width: 100%;
     }
   }
 
@@ -50,14 +63,11 @@
   z-index: 999;
   transition: linear all $transition-extra-slow;
   border-radius: 0;
+  overflow: auto;
 
   > div {
-    width: calc(100% - 64px);
-    padding: $size-xl;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     max-width: $screen-xl;
+    overflow: visible;
 
     .close-btn {
       position: absolute;
@@ -65,5 +75,14 @@
       top: $size-lg;
       background-color: transparent;
     }
+  }
+}
+
+@media screen and (max-width: $screen-xl) {
+  .cube-container .cube .cube-face .cube-section,
+  .cube-section {
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+    padding: $size-lg;
   }
 }

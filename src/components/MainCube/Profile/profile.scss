@@ -2,6 +2,10 @@
 
 .profile-section {
   > div {
+    p {
+      margin: $size-md 0;
+    }
+
     .bar-total {
       margin: $size-md 0;
     }

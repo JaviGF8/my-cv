@@ -1,0 +1,24 @@
+{
+  "atos": {
+    "role": "Programador junior",
+    "technologies": "Java, Primefaces, JavaScript, jQuery, ExtJs, Oracle"
+  },
+  "gmv": {
+    "role": "Programador senior",
+    "technologies": "AngularJs, JavaScript, Java, Primefaces, PostgreSQL, Oracle, Talend"
+  },
+  "plexus": {
+    "role": "Analista y desarrollador fullstack",
+    "technologies": "Java, AngularJs, JavaScript, Node, Springboot, Oracle, Mongo"
+  },
+  "oesia": {
+    "role": "Programador senior",
+    "technologies": "JavaScript, jQuery, Ajax, Java, Richfaces, MySQL, Oracle"
+  },
+  "present": "Actualidad",
+  "title": "Experiencia profesional",
+  "wozzo": {
+    "role": "Analista y desarrollador fullstack",
+    "technologies": "React, React Native, Redux, GraphQL, Apollo, Express, Node, Mongo"
+  }
+}

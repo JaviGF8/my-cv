@@ -55,10 +55,21 @@
         }
       }
 
-      .white-background {
-        background-color: $white;
+      .background {
         border-radius: $size-md;
         overflow: hidden;
+      }
+      .white-background {
+        background-color: $white;
+      }
+      .primary-background {
+        background-color: $primary;
+      }
+      .secondary-background {
+        background-color: $secondary;
+      }
+      .accent-background {
+        background-color: $accent;
       }
     }
   }
