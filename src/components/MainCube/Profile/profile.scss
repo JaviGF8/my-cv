@@ -1,0 +1,9 @@
+@import '../../../styles/constants.scss';
+
+.profile-section {
+  > div {
+    .bar-total {
+      margin: $size-md 0;
+    }
+  }
+}

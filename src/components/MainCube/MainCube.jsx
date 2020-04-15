@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Cube from '../Cube';
+import Profile from './Profile';
 import Section from '../Section';
 
 const getSize = () => {
@@ -23,12 +24,12 @@ const MainCube = ({ hiddenIntro }) => {
     <div id="main-cube" className={hiddenIntro ? '' : 'hidden-cube'}>
       <Cube
         className={initialTransition ? 'initial-transition' : ''}
-        leftContent={<Section title="FORMACION" />}
-        frontContent={<Section title="INFO" />}
-        rightContent={<Section title="TRAYECTORIA" />}
-        backContent={<Section title="SOCIAL" />}
-        bottomContent={<Section title="Made by Javier García Fajardo" disabled />}
-        topContent={<Section title="Hello :)" disabled />}
+        leftContent={hiddenIntro && <Section title="FORMACION" />}
+        frontContent={hiddenIntro && <Profile />}
+        rightContent={hiddenIntro && <Section title="TRAYECTORIA" />}
+        backContent={hiddenIntro && <Section title="SOCIAL" />}
+        bottomContent={hiddenIntro && <Section title="Made by Javier García Fajardo" disabled />}
+        topContent={hiddenIntro && <Section title="Hello :)" disabled />}
         size={size}
         withSwipe
       />

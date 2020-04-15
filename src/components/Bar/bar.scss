@@ -1,0 +1,67 @@
+@import '../../styles/constants.scss';
+
+.bar-total {
+  background-color: $gray-light;
+  border-radius: $size-sm;
+  overflow: hidden;
+  display: flex;
+
+  .bar {
+    padding: $size-sm 0;
+    transition: linear all $transition-slow;
+
+    > span {
+      margin-left: $size-md;
+      white-space: nowrap;
+    }
+  }
+  .bar.primary-darker {
+    background-color: $primary-darker;
+  }
+  .bar.primary-dark {
+    background-color: $primary-dark;
+  }
+  .bar.primary {
+    background-color: $primary;
+  }
+  .bar.secondary-darker {
+    background-color: $secondary-darker;
+  }
+  .bar.secondary-dark {
+    background-color: $secondary-dark;
+  }
+  .bar.secondary {
+    background-color: $secondary;
+  }
+  .bar.accent-darker {
+    background-color: $accent-darker;
+  }
+  .bar.accent-dark {
+    background-color: $accent-dark;
+  }
+  .bar.accent {
+    background-color: $accent;
+  }
+}
+.bar-total.vertical {
+  min-height: 100px;
+  width: $size-xl;
+  height: 100%;
+  align-items: flex-end;
+  .bar {
+    width: 100%;
+
+    > span {
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+    }
+  }
+}
+.bar-total.horizontal {
+  height: $size-xl;
+  min-width: 100px;
+  width: 100%;
+  .bar {
+    height: 100%;
+  }
+}
