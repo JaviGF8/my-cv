@@ -38,36 +38,8 @@ main {
 
     #main-cube {
       .cube-container {
-        transform: scale(1);
-        transition: ease-in-out all $transition-extra-slow $transition-mid;
-
         .cube-face {
-          cursor: pointer;
           @extend .shadow;
-          border-radius: $size-lg;
-
-          > * {
-            padding: $size-xl;
-
-            h2 {
-              margin: 0;
-            }
-          }
-        }
-      }
-
-      .cube-container.initial-transition {
-        .cube {
-          transition: ease-in-out all $transition-extra-slow $transition-mid;
-        }
-      }
-    }
-    #main-cube.hidden-cube {
-      .cube-container {
-        transform: scale(0) rotateZ(270deg);
-
-        .cube {
-          transform: rotateY(360deg) !important;
         }
       }
     }

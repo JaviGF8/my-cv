@@ -1,0 +1,65 @@
+@import '../../styles/constants.scss';
+
+.cube-section {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  cursor: pointer;
+  border-radius: $size-lg;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+
+  > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: $size-xl;
+    max-height: 80%;
+    overflow: hidden;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .see-more-btn {
+    height: 20%;
+    width: 100%;
+    align-self: center;
+    border-radius: 0;
+  }
+}
+.cube-section-full {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  transition: linear all $transition-extra-slow;
+
+  > div {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: $screen-xl;
+
+    .close-btn {
+      position: absolute;
+      right: $size-lg;
+      top: $size-lg;
+      background-color: transparent;
+    }
+  }
+}

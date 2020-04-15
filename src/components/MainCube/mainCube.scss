@@ -1,0 +1,35 @@
+@import '../../styles/constants.scss';
+
+#main-cube {
+  .cube-container {
+    transform: scale(1);
+    transition: ease-in-out all $transition-extra-slow $transition-mid;
+
+    .cube-face {
+      border-radius: $size-lg;
+
+      * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    }
+  }
+
+  .cube-container.initial-transition {
+    .cube {
+      transition: ease-in-out all $transition-extra-slow $transition-mid;
+    }
+  }
+}
+#main-cube.hidden-cube {
+  .cube-container {
+    transform: scale(0) rotateZ(270deg);
+
+    .cube {
+      transform: rotateY(360deg) !important;
+    }
+  }
+}

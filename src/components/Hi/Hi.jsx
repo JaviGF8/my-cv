@@ -2,17 +2,12 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Cube from '../Cube';
+import { CUBE_FACES } from '../Cube/Cube';
 
 const getSize = () => {
   const { innerHeight, innerWidth } = window;
 
   return Math.floor(((innerWidth > innerHeight ? innerHeight : innerWidth) * 0.7) / 10);
-};
-
-const getOption = () => {
-  const number = Math.floor(Math.random() * 4);
-
-  return [ 'bottom', 'left', 'right', 'top' ][number];
 };
 
 const content = <div className="white-background" />;
@@ -45,6 +40,18 @@ const Hi = ({ onHide }) => {
 
   const show = animation && !hidden;
 
+  const getRandomCube = () => {
+    let face = CUBE_FACES.front;
+
+    if (show) {
+      const number = Math.floor(Math.random() * 4);
+
+      face = [ CUBE_FACES.bottom, CUBE_FACES.left, CUBE_FACES.right, CUBE_FACES.top ][number];
+    }
+
+    return <Cube size={size} face={face} {...cubeOptions} />;
+  };
+
   return (
     <div className={`hi-container${hidden ? ' hidden' : ''}`}>
       <h1>
@@ -56,72 +63,72 @@ const Hi = ({ onHide }) => {
       <div className="hi">
         <div className="letter">
           <div>
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
           </div>
           <div>
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
           </div>
           <div>
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
+            {getRandomCube()}
+            {getRandomCube()}
           </div>
           <div>
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
           </div>
           <div>
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-          </div>
-        </div>
-        <div className="letter">
-          <div>
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-          </div>
-          <div>
-            {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            {unanimatedDiv}
-          </div>
-          <div>
-            {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            {unanimatedDiv}
-          </div>
-          <div>
-            {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            {unanimatedDiv}
-          </div>
-          <div>
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
           </div>
         </div>
         <div className="letter">
           <div>
+            {getRandomCube()}
+            {getRandomCube()}
+            {getRandomCube()}
+          </div>
+          <div>
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
             {unanimatedDiv}
           </div>
           <div>
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
             {unanimatedDiv}
           </div>
           <div>
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
+            {unanimatedDiv}
+          </div>
+          <div>
+            {getRandomCube()}
+            {getRandomCube()}
+            {getRandomCube()}
+          </div>
+        </div>
+        <div className="letter">
+          <div>
+            {unanimatedDiv}
+            {getRandomCube()}
+            {unanimatedDiv}
+          </div>
+          <div>
+            {unanimatedDiv}
+            {getRandomCube()}
+            {unanimatedDiv}
+          </div>
+          <div>
+            {unanimatedDiv}
+            {getRandomCube()}
             {unanimatedDiv}
           </div>
           <div>
@@ -131,7 +138,7 @@ const Hi = ({ onHide }) => {
           </div>
           <div>
             {unanimatedDiv}
-            <Cube size={size} face={show ? getOption() : 'front'} {...cubeOptions} />
+            {getRandomCube()}
             {unanimatedDiv}
           </div>
         </div>

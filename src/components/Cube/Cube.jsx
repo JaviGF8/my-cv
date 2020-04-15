@@ -16,7 +16,7 @@ const isArrowUp = ({ code, key, keyCode }) => 38 === keyCode || 'ArrowUp' === co
 const isArrowRight = ({ code, key, keyCode }) => 39 === keyCode || 'ArrowRight' === code || 'ArrRight' === key;
 const isArrowDown = ({ code, key, keyCode }) => 40 === keyCode || 'ArrowDown' === code || 'ArrowDown' === key;
 
-const Box = ({
+const Cube = ({
   backContent,
   bottomContent,
   className,
@@ -47,14 +47,6 @@ const Box = ({
   };
 
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  });
-
-  useEffect(() => {
     let x = 0;
     let y = 0;
 
@@ -83,8 +75,27 @@ const Box = ({
     setTimeout(() => setMoving(false), 500);
   }, [ angX, angY ]);
 
+  const handleMovement = (event) => {
+    event.preventDefault();
+    if (!moving && (startX || startY)) {
+      const clientX = event?.changedTouches?.[0]?.clientX || event.clientX;
+      const clientY = event?.changedTouches?.[0]?.clientY || event.clientY;
+
+      const diffX = clientX - startX;
+      const diffY = clientY - startY;
+
+      if (50 < Math.abs(diffX)) {
+        // horizontal swipe
+        setAngY(0 < diffX ? angY + 90 : angY - 90);
+      }
+      if (50 < Math.abs(diffY)) {
+        // vertical swipe
+        setAngX(0 < diffY ? angX - 90 : angX + 90);
+      }
+    }
+  };
+
   const handleMovementStart = (event) => {
-    // const [ { clientX, clientY } ] = event.touches;
     const clientX = event?.touches?.[0]?.clientX || event.clientX;
     const clientY = event?.touches?.[0]?.clientY || event.clientY;
 
@@ -92,23 +103,18 @@ const Box = ({
     setStartY(clientY);
   };
 
-  const handleMovement = (event) => {
-    // const [ { clientX, clientY } ] = event.changedTouches;
-    const clientX = event?.changedTouches?.[0]?.clientX || event.clientX;
-    const clientY = event?.changedTouches?.[0]?.clientY || event.clientY;
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
 
-    const diffX = clientX - startX;
-    const diffY = clientY - startY;
+    if (withSwipe) {
+      document.addEventListener('mouseup', handleMovement);
+    }
 
-    if (50 < Math.abs(diffX)) {
-      // horizontal swipe
-      setAngY(0 < diffX ? angY + 90 : angY - 90);
-    }
-    if (50 < Math.abs(diffY)) {
-      // vertical swipe
-      setAngX(0 < diffY ? angX - 90 : angX + 90);
-    }
-  };
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mouseup', handleMovement);
+    };
+  });
 
   return (
     <div
@@ -185,7 +191,7 @@ const Box = ({
   );
 };
 
-Box.defaultProps = {
+Cube.defaultProps = {
   backContent: undefined,
   bottomContent: undefined,
   className: undefined,
@@ -198,7 +204,7 @@ Box.defaultProps = {
   withSwipe: false,
 };
 
-Box.propTypes = {
+Cube.propTypes = {
   backContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
   bottomContent: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
   className: PropTypes.string,
@@ -211,4 +217,4 @@ Box.propTypes = {
   withSwipe: PropTypes.bool,
 };
 
-export default Box;
+export default Cube;
