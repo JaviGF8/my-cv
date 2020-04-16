@@ -5,11 +5,10 @@
     display: flex;
     flex-wrap: wrap;
 
-    .social-network {
+    a.social-network {
       width: calc(100% - 34px);
       display: flex;
       align-items: center;
-      color: $white;
       text-decoration: none;
       padding: $size-lg;
       margin-top: $size-lg;
@@ -20,12 +19,14 @@
         font-size: $font-title;
         padding-right: $size-xl;
         padding-left: $size-lg;
+        color: $white;
       }
 
       p {
         margin: 0;
         overflow: hidden;
         word-break: break-word;
+        color: $white;
       }
 
       .network-name {

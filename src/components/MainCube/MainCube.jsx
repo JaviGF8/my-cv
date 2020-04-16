@@ -7,6 +7,7 @@ import { CUBE_FACES } from '../Cube/Cube';
 import Experience from './Experience';
 import Social from './Social';
 import Education from './Education';
+import { translate } from '../../utils/translator';
 
 const getSize = () => {
   const { innerHeight, innerWidth } = window;
@@ -40,7 +41,16 @@ const MainCube = ({ hiddenIntro }) => {
         frontContent={hiddenIntro && <Profile {...commonProps} />}
         rightContent={hiddenIntro && <Experience {...commonProps} />}
         backContent={hiddenIntro && <Social {...commonProps} />}
-        bottomContent={hiddenIntro && <Section {...commonProps} title="Made by Javi García Fajardo" disabled />}
+        bottomContent={
+          hiddenIntro && (
+            <Section {...commonProps} title="Made by Javi García Fajardo" disabled>
+              <p>{translate('info.codeIn')}:</p>
+              <a target="_blank" href="https://github.com/JaviGF8/my-cv/" rel="noopener noreferrer">
+                https://github.com/JaviGF8/my-cv/
+              </a>
+            </Section>
+          )
+        }
         topContent={hiddenIntro && <Section {...commonProps} title="Hello :)" disabled />}
         size={size}
         withSwipe

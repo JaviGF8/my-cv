@@ -16,6 +16,10 @@
   justify-content: space-between;
   overflow: hidden;
 
+  a {
+    color: $accent;
+  }
+
   * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
