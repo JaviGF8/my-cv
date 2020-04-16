@@ -7,7 +7,7 @@
       flex-wrap: wrap;
 
       .education-title {
-        flex: 0 50%;
+        flex: 0 calc(50% - 4px);
         margin: $size-lg 0;
 
         p {
@@ -31,11 +31,28 @@
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
+        padding-left: $size-sm;
       }
       .education-title:nth-child(odd) {
+        padding-right: $size-sm;
         p {
           border-right: 1px solid $white;
-          padding-right: $size-md;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $screen-md) {
+  .education-section {
+    > div {
+      .education-titles {
+        .education-title {
+          flex: 0 100%;
+        }
+        .education-title:nth-child(odd) {
+          p {
+            border-right: 0;
+          }
         }
       }
     }
