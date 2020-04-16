@@ -5,6 +5,8 @@ import Profile from './Profile';
 import Section from '../Section';
 import { CUBE_FACES } from '../Cube/Cube';
 import Experience from './Experience';
+import Social from './Social';
+import Education from './Education';
 
 const getSize = () => {
   const { innerHeight, innerWidth } = window;
@@ -34,11 +36,11 @@ const MainCube = ({ hiddenIntro }) => {
         className={initialTransition ? 'initial-transition' : ''}
         disabled={isFullscreen}
         face={initialTransition ? CUBE_FACES.back : CUBE_FACES.front}
-        leftContent={hiddenIntro && <Section {...commonProps} title="FORMACION" />}
+        leftContent={hiddenIntro && <Education {...commonProps} />}
         frontContent={hiddenIntro && <Profile {...commonProps} />}
         rightContent={hiddenIntro && <Experience {...commonProps} />}
-        backContent={hiddenIntro && <Section {...commonProps} title="SOCIAL" />}
-        bottomContent={hiddenIntro && <Section {...commonProps} title="Made by Javier García Fajardo" disabled />}
+        backContent={hiddenIntro && <Social {...commonProps} />}
+        bottomContent={hiddenIntro && <Section {...commonProps} title="Made by Javi García Fajardo" disabled />}
         topContent={hiddenIntro && <Section {...commonProps} title="Hello :)" disabled />}
         size={size}
         withSwipe

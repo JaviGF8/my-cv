@@ -27,10 +27,13 @@ main {
   overflow: hidden;
 
   #main-container {
-    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;

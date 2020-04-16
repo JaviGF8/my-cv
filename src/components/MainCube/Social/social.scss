@@ -1,0 +1,51 @@
+@import '../../../styles/constants.scss';
+
+.social-section {
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    .social-network {
+      width: calc(100% - 34px);
+      display: flex;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      padding: $size-lg;
+      margin-top: $size-lg;
+      border: 1px solid $white;
+      border-radius: $size-sm;
+
+      i {
+        font-size: $font-title;
+        padding-right: $size-xl;
+        padding-left: $size-lg;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .network-name {
+        font-size: $font-xl;
+        font-weight: bold;
+        color: $secondary;
+      }
+      .network-username {
+        font-style: italic;
+      }
+      .network-link {
+        font-size: $font-sm;
+        text-decoration: underline;
+        color: $accent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .section-section {
+    > div {
+    }
+  }
+}

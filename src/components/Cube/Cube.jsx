@@ -56,9 +56,9 @@ const Cube = ({
     } else if (face === CUBE_FACES.back) {
       y = -180;
     } else if (face === CUBE_FACES.left) {
-      y = 90;
-    } else if (face === CUBE_FACES.right) {
       y = -90;
+    } else if (face === CUBE_FACES.right) {
+      y = 90;
     } else if (face === CUBE_FACES.top) {
       x = -90;
     } else if (face === CUBE_FACES.bottom) {

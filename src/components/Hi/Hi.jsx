@@ -61,7 +61,7 @@ const Hi = ({ onHide }) => {
         <span className="primary">
           My C<span>u</span>V<span>e</span>
         </span>{' '}
-        by <span className="secondary">Javier García</span>
+        by <span className="secondary">Javi García Fajardo</span>
       </h1>
       <div className="hi">
         <div className="letter">

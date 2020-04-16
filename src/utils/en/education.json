@@ -1,0 +1,43 @@
+{
+  "university": {
+    "expeditor": "Universidad de Sevilla",
+    "title": "Degree in Computer Engineering"
+  },
+  "react": {
+    "expeditor": "Imagina Formación",
+    "title": "React JS course"
+  },
+  "reactBasic": {
+    "expeditor": "Udemy",
+    "title": "React basic"
+  },
+  "angular4": {
+    "expeditor": "Udemy",
+    "title": "Learn Angular 4 from Scratch"
+  },
+  "typescript": {
+    "expeditor": "Udemy",
+    "title": "Introduction to TypeScript"
+  },
+  "jquery": {
+    "expeditor": "Udemy",
+    "title": "Building Websites web Development Introduction to jQuery"
+  },
+  "bootstrap": {
+    "expeditor": "Udemy",
+    "title": "Web Design Modern SinglePage Website from Scratch Bootstrap"
+  },
+  "angularjs": {
+    "expeditor": "FrontJs",
+    "title": "AngularJs formation"
+  },
+  "agile": {
+    "expeditor": "Universidad Rey Juan Carlos",
+    "title": "Agilidad y Lean. Gestionando los proyectos y negocios del s. XXI"
+  },
+  "android": {
+    "expeditor": "Universitat Politècnica de Valencia",
+    "title": "Android: Introduction to programming"
+  },
+  "title": "Education"
+}

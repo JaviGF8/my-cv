@@ -1,0 +1,43 @@
+@import '../../../styles/constants.scss';
+
+.education-section {
+  > div {
+    .education-titles {
+      display: flex;
+      flex-wrap: wrap;
+
+      .education-title {
+        flex: 0 50%;
+        margin: $size-lg 0;
+
+        p {
+          margin: 0;
+        }
+        .title-name {
+          font-size: $font-lg;
+        }
+        .title-expeditor {
+          color: $accent;
+          font-style: italic;
+          font-weight: 300;
+        }
+        .title-date {
+          color: $secondary;
+          font-size: $font-sm;
+        }
+      }
+      .education-title:nth-child(even) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+      }
+      .education-title:nth-child(odd) {
+        p {
+          border-right: 1px solid $white;
+          padding-right: $size-md;
+        }
+      }
+    }
+  }
+}
