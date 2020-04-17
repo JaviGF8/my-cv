@@ -1,6 +1,6 @@
 # My cv
 
-Deployed in [GitHub Pages](https://javigf8.github.io/my-cv/) and in [AWS](http://javi-my-cv.s3-website.eu-west-3.amazonaws.com/my-cv/)
+Deployed in [GitHub Pages](https://javigf8.github.io/my-cv/)
 
 ## Getting Started
 
