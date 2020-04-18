@@ -172,7 +172,7 @@ module.exports = JSON.parse("{\"atos\":{\"role\":\"Programador junior\",\"techno
 /***/ 142:
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"header\":\"Profesional fullstack con más de 6 años de experiencia.\",\"text\":\"More than 6 years as a fullstack developer, initially with Java technologies and since September 2017 focused on Javascript technologies.\",\"text2\":\"The technological stack I'm most comfortable with is React and/or React Native, GraphQL with Apollo and/or Redux, Node and Mongo.\",\"title\":\"Perfil profesional\"}");
+module.exports = JSON.parse("{\"header\":\"Profesional fullstack con más de 6 años de experiencia.\",\"text\":\"Más de 6 años como fullstack developer, inicialmente con tecnologías Java y desde septiembre de 2017 centrado en tecnologías Javascript.\",\"text2\":\"El stack tecnológico con el que más cómodo me siento es React y/o React Native, GraphQL con Apollo y/o Redux, Node y Mongo.\",\"title\":\"Perfil profesional\"}");
 
 /***/ }),
 
@@ -214,7 +214,7 @@ module.exports = JSON.parse("{\"codeIn\":\"You can see the code in\",\"howToUse\
 /***/ 148:
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"header\":\"Fullstack professional with more than 6 years of experience.\",\"text\":\"Más de 6 años como fullstack developer, inicialmente con tecnologías Java y desde septiembre de 2017 centrado en tecnologías Javascript.\",\"text2\":\"El stack tecnológico con el que más cómodo me siento es React y/o React Native, GraphQL con Apollo y/o Redux, Node y Mongo.\",\"title\":\"Professional profile\"}");
+module.exports = JSON.parse("{\"header\":\"Fullstack professional with more than 6 years of experience.\",\"text\":\"More than 6 years as a fullstack developer, initially with Java technologies and since September 2017 focused on Javascript technologies.\",\"text2\":\"The technological stack I'm most comfortable with is React and/or React Native, GraphQL with Apollo and/or Redux, Node and Mongo.\",\"title\":\"Professional profile\"}");
 
 /***/ }),
 
