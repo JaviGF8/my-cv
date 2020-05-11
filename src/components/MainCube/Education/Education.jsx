@@ -52,7 +52,7 @@ const Education = ({ ...rest }) => (
   <Section {...rest} title={translate('education.title')} className="education-section">
     <div className="education-titles">
       {titles.map((title) => (
-        <Title {...title} />
+        <Title key={title.name} {...title} />
       ))}
     </div>
   </Section>

@@ -1,0 +1,82 @@
+@import '../../styles/constants.scss';
+
+.info-section {
+  position: fixed;
+  right: $size-xl;
+  bottom: $size-xl;
+  background-color: $accent;
+  padding: $size-lg;
+  border-radius: 50%;
+  color: $white;
+  transition: linear all $transition-slow;
+  display: flex;
+  align-items: center;
+
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $size-xl;
+    height: $size-xl;
+    font-size: $font-title;
+  }
+
+  .info-container {
+    max-width: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: linear all $transition-slow;
+    overflow: hidden;
+
+    p {
+      font-size: 0;
+      opacity: 0;
+      transition: linear all $transition-slow, linear opacity $transition-slow $transition-slow;
+      text-align: justify;
+    }
+  }
+}
+.info-section.info-section-full {
+  border-radius: $size-sm;
+
+  .info-container {
+    max-width: 300px;
+    max-height: 80vh;
+    padding: 0 $size-lg;
+    opacity: 1;
+    transition: linear all $transition-slow;
+
+    p {
+      font-size: $font-md;
+      margin: 0;
+      opacity: 1;
+    }
+
+    .info-title {
+      text-decoration: underline;
+      font-size: $font-lg;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .info-section {
+    right: $size-md;
+    bottom: $size-md;
+  }
+  .info-section.info-section-full {
+    .info-container {
+      max-width: 200px;
+
+      p {
+        font-size: $font-sm;
+      }
+
+      .info-title {
+        font-size: $font-md;
+      }
+    }
+  }
+}

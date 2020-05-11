@@ -4,6 +4,8 @@
   > div {
     .company-experience {
       width: 100%;
+      min-height: 250px;
+      height: fit-content;
       display: flex;
       flex-wrap: wrap;
       padding: $size-md 0;

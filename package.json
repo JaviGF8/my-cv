@@ -7,7 +7,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "SET ENVIRONMENT=production&& webpack -p --progress",
+    "build": "SET ENVIRONMENT=production&& webpack -p --progress&& xcopy .\\public\\. .\\build\\public\\ /E",
     "start": "SET ENVIRONMENT=development&& webpack-dev-server -d --progress",
     "deploy-aws": "aws s3 sync build/ s3://my-cv",
     "mac": "ENVIRONMENT=development webpack-dev-server -d --progress"
@@ -71,6 +71,7 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.0.0",
     "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.2.0",
     "husky": "^4.2.5",
