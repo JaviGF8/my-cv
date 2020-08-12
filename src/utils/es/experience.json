@@ -11,6 +11,10 @@
     "role": "Analista y desarrollador fullstack",
     "technologies": "Java, AngularJs, JavaScript, Node, Springboot, Oracle, Mongo"
   },
+  "plexus2": {
+    "role": "Desarrollador",
+    "technologies": "React"
+  },
   "oesia": {
     "role": "Programador senior",
     "technologies": "JavaScript, jQuery, Ajax, Java, Richfaces, MySQL, Oracle"

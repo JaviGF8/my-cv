@@ -5,11 +5,19 @@ import Company from './Company';
 
 const companies = [
   {
+    name: 'Plexus Technologies',
+    role: translate('experience.plexus2.role'),
+    place: 'Palma de Mallorca / Sevilla',
+    start: '07/2020',
+    end: translate('experience.present'),
+    technologies: translate('experience.plexus2.technologies'),
+  },
+  {
     name: 'Wozzo',
     role: translate('experience.wozzo.role'),
     place: 'Palma de Mallorca',
     start: '09/2017',
-    end: translate('experience.present'),
+    end: '07/2020',
     technologies: translate('experience.wozzo.technologies'),
   },
   {
