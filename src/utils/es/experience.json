@@ -3,6 +3,10 @@
     "role": "Programador junior",
     "technologies": "Java, Primefaces, JavaScript, jQuery, ExtJs, Oracle"
   },
+  "cyferd": {
+    "role": "Programador fullstack",
+    "technologies": "React, NodeJs, Typescript, React Testing Library, Jest"
+  },
   "gmv": {
     "role": "Programador senior",
     "technologies": "AngularJs, JavaScript, Java, Primefaces, PostgreSQL, Oracle, Talend"
@@ -12,14 +16,18 @@
     "technologies": "Java, AngularJs, JavaScript, Node, Springboot, Oracle, Mongo"
   },
   "plexus2": {
-    "role": "Desarrollador",
-    "technologies": "React"
+    "role": "Desarrollador frontend y team leader",
+    "technologies": "NextJs, React, Typescript, React Testing Library, Jest, NodeJs"
   },
   "oesia": {
     "role": "Programador senior",
     "technologies": "JavaScript, jQuery, Ajax, Java, Richfaces, MySQL, Oracle"
   },
   "present": "Actualidad",
+  "syngenta": {
+    "role": "Programador frontend",
+    "technologies": "React, React Native, Typescript, React Testing Library, Jest"
+  },
   "title": "Experiencia profesional",
   "wozzo": {
     "role": "Analista y desarrollador fullstack",
