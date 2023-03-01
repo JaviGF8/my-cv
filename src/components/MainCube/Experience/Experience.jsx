@@ -5,11 +5,27 @@ import Company from './Company';
 
 const companies = [
   {
+    name: 'Syngenta',
+    role: translate('experience.syngenta.role'),
+    place: 'Sevilla',
+    start: '01/2023',
+    end: translate('experience.present'),
+    technologies: translate('experience.syngenta.technologies'),
+  },
+  {
+    name: 'Cyferd',
+    role: translate('experience.cyferd.role'),
+    place: 'Sevilla',
+    start: '08/2022',
+    end: '01/2023',
+    technologies: translate('experience.cyferd.technologies'),
+  },
+  {
     name: 'Plexus Technologies',
     role: translate('experience.plexus2.role'),
     place: 'Palma de Mallorca / Sevilla',
     start: '07/2020',
-    end: translate('experience.present'),
+    end: '07/2022',
     technologies: translate('experience.plexus2.technologies'),
   },
   {
