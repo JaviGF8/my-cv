@@ -9,7 +9,7 @@ export type BarColor =
   | 'bg-secondary-darker'
   | 'bg-secondary';
 
-export interface BarDisplayData {
+export type BarDisplayData = {
   colorClass: BarColor;
   percentage: number;
-}
+};

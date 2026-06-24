@@ -1,3 +1,3 @@
-export interface HelloFaceProps {
+export type HelloFaceProps = {
   onExpandChange?: (isOpen: boolean) => void;
-}
+};

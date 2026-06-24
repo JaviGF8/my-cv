@@ -2,12 +2,12 @@ import type { ReactNode } from 'react';
 
 export type Face = 'back' | 'bottom' | 'front' | 'left' | 'right' | 'top';
 
-export interface Point {
+export type Point = {
   x: number;
   y: number;
-}
+};
 
-export interface CubeProps {
+export type CubeProps = {
   backContent?: ReactNode;
   bottomContent?: ReactNode;
   className?: string;
@@ -20,4 +20,4 @@ export interface CubeProps {
   rightContent?: ReactNode;
   size: number;
   topContent?: ReactNode;
-}
+};

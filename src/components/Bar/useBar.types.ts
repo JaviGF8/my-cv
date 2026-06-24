@@ -1,10 +1,10 @@
-export interface UseBarParams {
+export type UseBarParams = {
   amount: number;
   totalAmount: number;
-}
+};
 
-export interface UseBarResult {
+export type UseBarResult = {
   colorClass: string;
   isMounted: boolean;
   percentage: number;
-}
+};

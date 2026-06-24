@@ -1,13 +1,13 @@
 import type { Face } from 'features/cube/Cube.types';
 
-export interface UseMainCubeParams {
+export type UseMainCubeParams = {
   isIntroHidden: boolean;
-}
+};
 
-export interface UseMainCubeResult {
+export type UseMainCubeResult = {
   face: Face;
   handleExpandChange: (isOpen: boolean) => void;
   isFullscreen: boolean;
   isInitialTransition: boolean;
   size: number;
-}
+};

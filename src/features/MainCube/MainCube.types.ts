@@ -1,3 +1,3 @@
-export interface MainCubeProps {
+export type MainCubeProps = {
   isIntroHidden: boolean;
-}
+};

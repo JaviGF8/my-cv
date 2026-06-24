@@ -1,9 +1,9 @@
-export interface TitleData {
+export type TitleData = {
   date: string;
   expeditor: string;
   name: string;
-}
+};
 
-export interface EducationFaceProps {
+export type EducationFaceProps = {
   onExpandChange?: (isOpen: boolean) => void;
-}
+};

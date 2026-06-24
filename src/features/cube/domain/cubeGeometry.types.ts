@@ -1,6 +1,6 @@
-export interface CubeTransformParams {
+export type CubeTransformParams = {
   angX: number;
   angY: number;
   angZ: number;
   size: number;
-}
+};

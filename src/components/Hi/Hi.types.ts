@@ -1,3 +1,3 @@
-export interface HiProps {
+export type HiProps = {
   onHide?: () => void;
-}
+};

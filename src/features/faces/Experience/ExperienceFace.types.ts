@@ -1,12 +1,12 @@
-export interface CompanyData {
+export type CompanyData = {
   end: string;
   name: string;
   place: string;
   role: string;
   start: string;
   technologies: string;
-}
+};
 
-export interface ExperienceFaceProps {
+export type ExperienceFaceProps = {
   onExpandChange?: (isOpen: boolean) => void;
-}
+};

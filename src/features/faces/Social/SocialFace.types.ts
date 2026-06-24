@@ -1,10 +1,10 @@
-export interface NetworkData {
+export type NetworkData = {
   icon: string;
   link: string;
   name: string;
   username: string;
-}
+};
 
-export interface SocialFaceProps {
+export type SocialFaceProps = {
   onExpandChange?: (isOpen: boolean) => void;
-}
+};

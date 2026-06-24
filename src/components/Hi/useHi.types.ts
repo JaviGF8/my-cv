@@ -1,9 +1,9 @@
 import type { HiPhase } from './domain/hiDomain.types';
 
-export interface UseHiParams {
+export type UseHiParams = {
   onHide?: () => void;
-}
+};
 
-export interface UseHiResult {
+export type UseHiResult = {
   phase: HiPhase;
-}
+};

@@ -2,15 +2,15 @@ import type { PointerEvent as ReactPointerEvent } from 'react';
 
 import type { Face } from './Cube.types';
 
-export interface UseCubeParams {
+export type UseCubeParams = {
   size: number;
   face: Face;
   isDisabled: boolean;
   hasSwipe: boolean;
   onFaceChange?: (face: Face) => void;
-}
+};
 
-export interface UseCubeResult {
+export type UseCubeResult = {
   cubeTransform: string;
   getFaceTransform: (face: Face) => string;
   frontFace: Face;
@@ -18,4 +18,4 @@ export interface UseCubeResult {
   handlePointerDown: (e: ReactPointerEvent) => void;
   handlePointerUp: (e: ReactPointerEvent) => void;
   isMoving: boolean;
-}
+};
