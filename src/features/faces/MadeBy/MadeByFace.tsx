@@ -10,7 +10,7 @@ export const MadeByFace: FC<MadeByFaceProps> = ({ onExpandChange }) => {
   const { t } = useTranslate();
 
   return (
-    <Section onExpandChange={onExpandChange} title="Made by Javi García Fajardo">
+    <Section onExpandChange={onExpandChange} title="Made by Javi Fajardo García">
       <p className="text-sm">{t('info.codeIn')}:</p>
       <a
         className="text-secondary-light hover:text-secondary text-sm"

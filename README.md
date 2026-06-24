@@ -1,4 +1,4 @@
-# My CuVe — Javi García Fajardo
+# My CuVe — Javi Fajardo García
 
 Interactive 3D CV built with React, TypeScript, Vite, and Tailwind CSS.
 Rotate a cube to explore six faces of professional information.
