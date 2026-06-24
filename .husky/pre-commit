@@ -1,0 +1,28 @@
+set -e
+
+echo '🏗️👷 Verifying types and code standards in project before committing'
+
+
+# Check ESLint standards (includes prettier)
+yarn lint-staged ||
+(
+  echo 'ESLint Check Failed. Run yarn format, add changes and try commit again.';
+  exit 1;
+)
+
+
+# Check tsconfig standards
+yarn check-types ||
+(
+  echo 'Type Check Failed. Make the changes required above.'
+  exit 1;
+)
+
+# Check code formatting
+yarn check-format ||
+(
+  echo 'Prettier Check Failed. Run yarn format, add changes and try commit again.';
+  exit 1;
+)
+
+echo '✅✅✅✅ Check successful. Committing... ✅✅✅✅'

@@ -1,0 +1,1 @@
+export { EducationFace } from './EducationFace';

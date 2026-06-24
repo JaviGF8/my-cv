@@ -1,0 +1,1 @@
+export { ProfileFace } from './ProfileFace';

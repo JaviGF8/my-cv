@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Primary palette */
+  --color-primary-darker: #900a10;
+  --color-primary-dark: #a71520;
+  --color-primary: #b71d2b;
+  --color-primary-light: #cd616b;
+  --color-primary-lighter: #e9bbbf;
+
+  /* Secondary palette */
+  --color-secondary-darker: #488e7e;
+  --color-secondary-dark: #65a698;
+  --color-secondary: #78b6a9;
+  --color-secondary-light: #a1ccc3;
+  --color-secondary-lighter: #d7e9e5;
+
+  /* Accent palette */
+  --color-accent-darker: #e8b361;
+  --color-accent-dark: #eec47d;
+  --color-accent: #f2d090;
+  --color-accent-light: #f6deb1;
+  --color-accent-lighter: #fbf1de;
+
+  /* Neutrals */
+  --color-gray: #888888;
+  --color-gray-light: #c0c0c0;
+  --color-gray-lighter: #d8d8d8;
+  --color-bg: #fafaff;
+  --color-surface: #ffffff;
+  --color-ink: #080808;
+
+  /* Transitions */
+  --transition-timing-extra-slow: 1s;
+  --transition-timing-slow: 0.5s;
+  --transition-timing-mid: 0.25s;
+  --transition-timing-fast: 0.1s;
+
+  /* Font family */
+  --font-family-sans: 'Poppins', sans-serif;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-fade-out: fade-out 0.5s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+html {
+  background-color: var(--color-bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  font-size: 14px;
+  color: var(--color-ink);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+#root {
+  user-select: none;
+  -webkit-user-select: none;
+}

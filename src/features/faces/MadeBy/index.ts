@@ -1,0 +1,1 @@
+export { MadeByFace } from './MadeByFace';

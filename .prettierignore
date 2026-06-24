@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.eslintrc.json
+README.md
+tsconfig.json
+package.json
+package-lock.json
+.vscode
+.agents
+.codex
+.claude
+.gemini
+.github

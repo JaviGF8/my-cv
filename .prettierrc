@@ -1,11 +1,14 @@
 {
-  "singleQuote": true,
-  "useTabs": false,
-  "printWidth": 120,
+  "$schema": "http://json.schemastore.org/prettierrc",
+  "printWidth": 100,
   "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "quoteProps": "consistent",
+  "jsxSingleQuote": false,
   "trailingComma": "all",
-  "jsxBracketSameLine": true,
-  "noSemi": true,
   "bracketSpacing": true,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "endOfLine": "lf"
 }

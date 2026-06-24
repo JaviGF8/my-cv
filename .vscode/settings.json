@@ -1,0 +1,31 @@
+{  
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "[javascript][typescript][javascriptreact][typescriptreact][scss]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.claude/worktrees/**": true,
+    "**/.git/worktrees/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.claude/worktrees/**": true,
+    "**/.git/worktrees/**": true
+  },
+  "files.eol": "\n",
+  "eslint.useFlatConfig": true,
+  "eslint.nodePath": "./node_modules",
+  "eslint.runtime": "node"
+}

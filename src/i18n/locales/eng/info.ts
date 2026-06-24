@@ -1,0 +1,7 @@
+const info = {
+  codeIn: 'You can see the code in',
+  howToUse: 'How to use?',
+  info: 'You can see any of the faces of the cube by dragging on it in the desired direction. To see the complete information of any of the faces, double-click on it. Both functionalities are available for mobile and computer.',
+};
+
+export default info;

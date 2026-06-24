@@ -1,0 +1,1 @@
+export { HelloFace } from './HelloFace';
