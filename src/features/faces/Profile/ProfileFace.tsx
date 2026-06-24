@@ -25,8 +25,8 @@ export const ProfileFace: FC<ProfileFaceProps> = ({ onExpandChange }) => {
       <Bar amount={50} text="NextJs" />
       <Bar amount={50} text="React Native" />
       <Bar amount={50} text="GraphQL" />
-      <Bar amount={30} text="Angular" />
-      <Bar amount={40} text="Java" />
+      <Bar amount={35} text="Angular" />
+      <Bar amount={25} text="Java" />
       <p className="mt-3 text-sm">{t('profile.text')}</p>
       <p className="mt-2 text-sm">{t('profile.text2')}</p>
     </Section>
